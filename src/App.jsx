@@ -6,7 +6,7 @@ import AllBlogs from "./pages/allBlogs/AllBlogs";
 import BlogInfo from "./pages/blogInfo/BlogInfo";
 import AdminLogin from "./pages/admin/adminLogin/AdminLogin";
 import Dashboard from "./pages/admin/dashboard/Dashboard";
-import NoPage from "./pages/nopage/NoPage";
+import NoPage from "./pages/noPage/NoPage";
 import MyState from "./context/data/myState";
 import { Toaster } from "react-hot-toast";
 import CreateBlog from "./pages/admin/createBlog/CreateBlog";
