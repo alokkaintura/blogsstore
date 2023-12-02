@@ -82,7 +82,7 @@ export default function Nav() {
                             />
                             {/* Logo Text  */}
                             <span>
-                                Blog Writer
+                                <b>MIX</b>Blog
                             </span>
                         </Typography>
                     </Link>

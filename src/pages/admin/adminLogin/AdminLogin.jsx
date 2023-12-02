@@ -1,9 +1,10 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import {
   Card,
   CardHeader,
   CardBody,
   Input,
+  TextInput,
   Button,
   Typography,
 } from "@material-tailwind/react";
@@ -23,7 +24,9 @@ export default function AdminLogin() {
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
-
+    const [confirm, setConfirm] = useState('');
+    const [code, setCode] = useState('');
+ 
     //* Login Function
     const login = async () => {
         if(!email || !password) {
@@ -40,7 +43,7 @@ export default function AdminLogin() {
 
         }
     }
-
+ 
     return (
         <div className="flex justify-center items-center h-screen">
 
@@ -118,8 +121,10 @@ export default function AdminLogin() {
                             }}>
                             Login
                         </Button>
+                       
                     </form>
                 </CardBody>
+               
             </Card>
         </div>
 

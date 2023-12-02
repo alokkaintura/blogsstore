@@ -105,7 +105,7 @@ return (
                 'rgb(30, 41, 59)'
                 : 'rgb(226, 232, 240)'
             }}>
-            more
+           Start Exploring
           </Button>
           </Link>
         </div>
