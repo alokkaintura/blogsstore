@@ -79,6 +79,19 @@ function CreateBlog() {
     function createMarkup(c) {
         return { __html: c };
     }
+
+   function sendEmail(){
+    Email.send({
+        SecureToken : "f4d0cd63-6d24-4a08-80e5-337f1425558c", //add your token here
+        To : 'akaintura1@gmail.com', 
+        From : "akaintura1@gmail.com",
+        Subject : "This is the subject",
+        Body : "hey this is test mail"
+    }).then(
+      message => alert(message)
+    );
+   }
+
     return (
         <div className=' container mx-auto max-w-5xl py-6'>
             <div className="p-5" style={{
@@ -219,9 +232,9 @@ function CreateBlog() {
                         plugins: 'a11ychecker advcode advlist advtable anchor autocorrect autolink autoresize autosave casechange charmap checklist code codesample directionality editimage emoticons export footnotes formatpainter fullscreen help image importcss inlinecss insertdatetime link linkchecker lists media mediaembed mentions mergetags nonbreaking pagebreak pageembed permanentpen powerpaste preview quickbars save searchreplace table tableofcontents template  tinydrive tinymcespellchecker typography visualblocks visualchars wordcount'
                     }}
                 />
-
+<form onSubmit= {sendEmail}>
                 {/* Five Submit Button  */}
-                <Button className=" w-full mt-5"
+                <Button className=" w-full mt-5" 
                 onClick={addPost}
                     style={{
                         background: mode === 'dark'
@@ -234,7 +247,7 @@ function CreateBlog() {
                 >
                     Send
                 </Button>
-
+</form>
                 {/* Six Preview Section  */}
                 <div className="">
                     <h1 className=" text-center mb-3 text-2xl">Preview</h1>
